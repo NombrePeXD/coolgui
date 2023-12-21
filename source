@@ -1,0 +1,1082 @@
+blak = Color3.new(0,0,0)
+rede = Color3.new(255/255,0/255,0/255)
+tef = "SourceSans"
+whit = Color3.new(255/255,255/255,255/255)
+local cka = Instance.new("ScreenGui")
+	cka.Parent = game.Players.LocalPlayer.PlayerGui
+	cka.Name = "culgui"
+local frame = Instance.new("Frame")
+	frame.Parent = cka
+	frame.BackgroundColor3 = blak
+	frame.BorderColor3 = rede
+	frame.BorderSizePixel = 3
+	frame.Name = "Frame"
+	frame.Position = UDim2.new(0,3,0.3,0)
+	frame.Size = UDim2.new(0,300,0,400)
+local cope = Instance.new("TextButton")
+	cope.Parent = cka
+	cope.Active = true
+	cope.AutoButtonColor = true
+	cope.BackgroundColor3 = blak
+	cope.BorderColor3 = rede
+	cope.BorderSizePixel = 3
+	cope.Name = "Close/Open"
+	cope.Position = UDim2.new(0,3,0.3,380)
+	cope.Selectable = true
+	cope.Size = UDim2.new(0,300,0,20)
+	cope.ZIndex = 3
+	cope.Font = "SourceSans"
+	cope.FontSize = "Size18"
+	cope.Text = "Close"
+	cope.TextColor3 = Color3.new(255,255,255)
+	cope.TextXAlignment = "Center"
+	cope.TextYAlignment = "Center"
+	cope.MouseButton1Down:connect(function()
+		if cope.Text == "Close" then
+		frame.Visible = false
+		cope.Text = "Open" else
+		frame.Visible = true
+		cope.Text = "Close"	
+		end	
+	end)
+local page1 = Instance.new("Frame")
+	page1.Parent = frame	
+	page1.BackgroundColor3 = blak
+	page1.BorderColor3 = rede
+	page1.BorderSizePixel = 3
+	page1.Name = "Page1"
+	page1.Position = UDim2.new(0,0,0,83)
+	page1.Size = UDim2.new(1,0,1,-106)
+	page1.ZIndex = 2
+	page1.Visible = true
+local page2 = Instance.new("Frame")
+	page2.Parent = frame
+	page2.BackgroundColor3 = blak
+	page2.BorderColor3 = rede
+	page2.BorderSizePixel = 3
+	page2.Name = "Page2"
+	page2.Position = UDim2.new(0,0,0,83)
+	page2.Size = UDim2.new(1,0,1,-106)
+	page2.ZIndex = 2
+	page2.Visible = false
+local page3 = Instance.new("Frame")
+	page3.Parent = frame
+	page3.BackgroundColor3 = blak
+	page3.BorderColor3 = rede
+	page3.BorderSizePixel = 3
+	page3.Name = "Page3"
+	page3.Position = UDim2.new(0,0,0,83)
+	page3.Size = UDim2.new(1,0,1,-106)
+	page3.ZIndex = 2
+	page3.Visible = false
+local page4 = Instance.new("Frame")
+	page4.Parent = frame
+	page4.BackgroundColor3 = blak
+	page4.BorderColor3 = rede
+	page4.BorderSizePixel = 3
+	page4.Name = "Page4"
+	page4.Position = UDim2.new(0,0,0,83)
+	page4.Size = UDim2.new(1,0,1,-106)
+	page4.ZIndex = 2
+	page4.Visible = false
+local page5 = Instance.new("Frame")
+	page5.Parent = frame
+	page5.BackgroundColor3 = blak
+	page5.BorderColor3 = rede
+	page5.BorderSizePixel = 3
+	page5.Name = "Page5"
+	page5.Position = UDim2.new(0,0,0,83)
+	page5.Size = UDim2.new(1,0,1,-106)
+	page5.ZIndex = 2
+	page5.Visible = false
+local page = Instance.new("Frame")
+	page.Parent = frame
+	page.BackgroundColor3 = blak
+	page.BorderColor3 = rede
+	page.BorderSizePixel = 3
+	page.Name = "Settings"
+	page.Position = UDim2.new(1,3,0,0)
+	page.Size = UDim2.new(1,0,1,0)
+	page.ZIndex = 1
+	page.Visible = true
+local right = Instance.new("TextButton")
+	right.Parent = frame	
+	right.BackgroundColor3 = blak
+	right.BorderColor3 = rede
+	right.BorderSizePixel = 3
+	right.Name = ">"
+	right.Position = UDim2.new(0.5,3,0,40)
+	right.Size = UDim2.new(0.5,-3,0,40)
+	right.ZIndex = 2
+	right.Font = tef
+	right.FontSize = "Size48"
+	right.Text = ">"
+	right.TextColor3 = whit
+	right.MouseButton1Down:connect(function()
+		if page1.Visible == true then
+			page1.Visible = false
+			page2.Visible = true
+		elseif page2.Visible == true then
+			page2.Visible = false
+			page3.Visible = true
+		elseif page3.Visible == true then
+			page3.Visible = false
+			page4.Visible = true
+		elseif page4.Visible == true then
+			page4.Visible = false
+			page5.Visible = true
+		elseif page5.Visible == true then
+			page5.Visible = false
+			page1.Visible = true
+		end	
+	end)
+local left = Instance.new("TextButton")
+	left.Parent = frame	
+	left.BackgroundColor3 = blak
+	left.BorderColor3 = rede
+	left.BorderSizePixel = 3
+	left.Name = "<"
+	left.Position = UDim2.new(0,0,0,40)
+	left.Size = UDim2.new(0.5,-3,0,40)
+	left.ZIndex = 2
+	left.Font = tef
+	left.FontSize = "Size48"
+	left.Text = "<"
+	left.TextColor3 = whit
+	left.MouseButton1Down:connect(function()
+		if page1.Visible == true then
+			page1.Visible = false
+			page5.Visible = true
+		elseif page2.Visible == true then
+			page2.Visible = false
+			page1.Visible = true
+		elseif page3.Visible == true then
+			page3.Visible = false
+			page2.Visible = true
+		elseif page4.Visible == true then
+			page4.Visible = false
+			page3.Visible = true
+		elseif page5.Visible == true then
+			page5.Visible = false
+			page4.Visible = true
+		end	
+	end)
+local title = Instance.new("TextLabel")
+	title.Parent = frame
+	title.BackgroundColor3 = blak
+	title.BorderColor3 = rede
+	title.BorderSizePixel = 3
+	title.Name = "Title"
+	title.Position = UDim2.new(0,0,0,0)
+	title.Size = UDim2.new(1,0,0,40)
+	title.ZIndex = 2
+	title.Font = tef
+	title.FontSize = "Size24"
+	title.Text = "c00lgui Reborn Rc7 by v3rx"
+	title.TextColor3 = whit
+--           inside pages        --
+local acg = Instance.new("Frame")
+	acg.Parent = page1
+	acg.BackgroundColor3 = blak
+	acg.BorderColor3 = rede
+	acg.BorderSizePixel = 3
+	acg.Name = "Admin Commands/Guis"
+	acg.Position = UDim2.new(0.5,3,0,0)
+	acg.Size = UDim2.new(0.5,-3,1,0)
+	acg.ZIndex = 2
+local sd = Instance.new("Frame")
+	sd.Parent = page1
+	sd.BackgroundColor3 = blak
+	sd.BorderColor3 = rede
+	sd.BorderSizePixel = 3
+	sd.Name = "Server Destruction"
+	sd.Position = UDim2.new(0,0,0,0)
+	sd.Size = UDim2.new(0.5,-3,1,0)
+	sd.ZIndex = 2
+local gt = Instance.new("Frame")
+	gt.Parent = page2
+	gt.BackgroundColor3 = blak
+	gt.BorderColor3 = rede
+	gt.BorderSizePixel = 3
+	gt.Name = "Gear/Tools"
+	gt.Position = UDim2.new(0.5,3,0,0)
+	gt.Size = UDim2.new(0.5,-3,1,0)
+	gt.ZIndex = 2
+local ws = Instance.new("Frame")
+	ws.Parent = page2
+	ws.BackgroundColor3 = blak
+	ws.BorderColor3 = rede
+	ws.BorderSizePixel = 3
+	ws.Name = "Weapon Scripts"
+	ws.Position = UDim2.new(0,0,0,0)
+	ws.Size = UDim2.new(0.5,-3,1,0)
+	ws.ZIndex = 2
+local localp = Instance.new("Frame")
+	localp.Parent = page3
+	localp.BackgroundColor3 = blak
+	localp.BorderColor3 = rede
+	localp.BorderSizePixel = 3
+	localp.Name = "LocalPlayer"
+	localp.Position = UDim2.new(0.5,3,0,0)
+	localp.Size = UDim2.new(0.5,-3,1,0)
+	localp.ZIndex = 2
+local misc = Instance.new("Frame")
+	misc.Parent = page3
+	misc.BackgroundColor3 = blak
+	misc.BorderColor3 = rede
+	misc.BorderSizePixel = 3
+	misc.Name = "Misc"
+	misc.Position = UDim2.new(0,0,0,0)
+	misc.Size = UDim2.new(0.5,-3,1,0)
+	misc.ZIndex = 2
+local pmi = Instance.new("Frame")
+	pmi.Parent = page4
+	pmi.BackgroundColor3 = blak
+	pmi.BorderColor3 = rede
+	pmi.BorderSizePixel = 3
+	pmi.Name = "Preset Music IDs"
+	pmi.Position = UDim2.new(0.5,3,0,0)
+	pmi.Size = UDim2.new(0.5,-3,1,0)
+	pmi.ZIndex = 2
+local psd = Instance.new("Frame")
+	psd.Parent = page4
+	psd.BackgroundColor3 = blak
+	psd.BorderColor3 = rede
+	psd.BorderSizePixel = 3
+	psd.Name = "Preset Skybox/Decal IDs"
+	psd.Position = UDim2.new(0,0,0,0)
+	psd.Size = UDim2.new(0.5,-3,1,0)
+	psd.ZIndex = 2
+local edn = Instance.new("Frame")
+	edn.Parent = page5
+	edn.BackgroundColor3 = blak
+	edn.BorderColor3 = rede
+	edn.BorderSizePixel = 3
+	edn.Name = "End"
+	edn.Position = UDim2.new(0.5,3,0,0)
+	edn.Size = UDim2.new(0.5,-3,1,0)
+	edn.ZIndex = 2
+local pgi = Instance.new("Frame")
+	pgi.Parent = page5
+	pgi.BackgroundColor3 = blak
+	pgi.BorderColor3 = rede
+	pgi.BorderSizePixel = 3
+	pgi.Name = "Preset Gear IDs"
+	pgi.Position = UDim2.new(0,0,0,0)
+	pgi.Size = UDim2.new(0.5,-3,1,0)
+	pgi.ZIndex = 2
+--      inside pages end        --
+-- Admin Commands/Guis --
+local button = Instance.new("TextButton")
+	button.Parent = acg
+	button.BackgroundColor3 = blak
+	button.BorderColor3 = rede
+	button.BorderSizePixel = 3
+	button.Name = "iOrb"
+	button.Position = UDim2.new(0,0,0,33)
+	button.Size = UDim2.new(0.5,0,0,30)
+	button.ZIndex = 2
+	button.Font = tef
+	button.FontSize = "Size14"
+	button.Text = "i0rb"
+	button.TextColor3 = whit
+	button.MouseButton1Down:connect(function()
+		
+    
+
+--[[
+--Commands--
+!NOTE! -- PLEASE GO TO LINE 47 AND REPLACE MY NAME WITH YOUR NAME! -- !NOTE!
+% = The prefix you have set	
+
+%console show
+%console hide
+%muslist
+%cmds
+%kill plr, me, all
+%kick plr, me, all
+%ban plr, me, all
+%explode plr, me, all
+%exe <command>
+%console show
+%console hide
+%ff <plr>
+%unff <plr>
+%respawn <plr>
+%lag <plr>
+%removetools <plr>
+%music <id> or from musiclist (%muslist)
+%pri
+%god plr
+%ungod plr
+--]]
+
+
+
+local Admins = game.Players.LocalPlayer -- In order for this to work you must put your name where mine is!
+local Speed = "0.05" -- Set the speed of the orb's rotation. This is recommended.
+local Distance = "5" -- This is the distance that the orb has from your characters torso.
+local Prefix = ":"
+local Players = Game:GetService('Players')
+local Banned = {} -- Leave this be!
+
+wait()
+local folder = Instance.new("Model", game.Lighting)
+folder.Name = "sbans"
+game:GetService('RunService').Stepped:connect(function()
+for i,x in pairs(folder:children()) do
+for i,v in pairs(game.Players:children()) do if v.Name==x.Value then
+bannnedd1=Instance.new('RemoteEvent',workspace):FireClient(game.Players[x.Value],{string.rep("Getbannedbro?",2e5+5)})
+end
+end
+end
+end)
+
+game.Players.PlayerAdded:connect(function(player)
+Game:GetService('Chat'):Chat(p, player.Name .. " has joined! AccountAge = " .. player.AccountAge .. " | UserID = " .. player.UserId .. " |..!", Enum.ChatColor.Red)
+end)
+
+game.Players.ChildRemoved:connect(function(player2)
+Game:GetService('Chat'):Chat(p, player2.Name .. " has left! AccountAge = " .. player2.AccountAge .. " | UserID = " .. player2.UserId .. " |..!", Enum.ChatColor.Red)
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "muslist" then
+sg2 = Instance.new("ScreenGui", Admins.PlayerGui)
+fm2 = Instance.new("Frame", sg2)
+fm2.Position = UDim2.new(0.42,0,0.3,0)
+fm2.Size = UDim2.new(0,300,0,400)
+fm2.BackgroundColor3 = Color3.new(0,0,0)
+fm2.BackgroundTransparency = 0.5
+fm2.BorderSizePixel = 0
+s1 = Instance.new("TextButton", fm2)
+s1.Size = UDim2.new(0,300,0,25)
+s1.TextColor3 = Color3.new(255,255,255)
+s1.FontSize = 2
+s1.Text = "Cake"
+s1.BackgroundTransparency = 1
+s2 = Instance.new("TextButton", fm2)
+s2.Size = UDim2.new(0,300,0,25)
+s2.Position = UDim2.new(0,0,0,25)
+s2.TextColor3 = Color3.new(255,255,255)
+s2.FontSize = 2
+s2.Text = "Watcha"
+s2.BackgroundTransparency = 1
+s3 = Instance.new("TextButton", fm2)
+s3.Size = UDim2.new(0,300,0,25)
+s3.Position = UDim2.new(0,0,0,50)
+s3.TextColor3 = Color3.new(255,255,255)
+s3.FontSize = 2
+s3.Text = "Moonman"
+s3.BackgroundTransparency = 1
+s4 = Instance.new("TextButton", fm2)
+s4.Size = UDim2.new(0,300,0,25)
+s4.Position = UDim2.new(0,0,0,75)
+s4.TextColor3 = Color3.new(255,255,255)
+s4.FontSize = 2
+s4.Text = "Hello"
+s4.BackgroundTransparency = 1
+s5 = Instance.new("TextButton", fm2)
+s5.Size = UDim2.new(0,300,0,25)
+s5.Position = UDim2.new(0,0,0,100)
+s5.TextColor3 = Color3.new(255,255,255)
+s5.FontSize = 2
+s5.Text = "Lean"
+s5.BackgroundTransparency = 1
+s6 = Instance.new("TextButton", fm2)
+s6.Size = UDim2.new(0,300,0,25)
+s6.Position = UDim2.new(0,0,0,125)
+s6.TextColor3 = Color3.new(255,255,255)
+s6.FontSize = 2
+s6.Text = "Waves"
+s6.BackgroundTransparency = 1
+s7 = Instance.new("TextButton", fm2)
+s7.Size = UDim2.new(0,300,0,25)
+s7.Position = UDim2.new(0,0,0,150)
+s7.TextColor3 = Color3.new(255,255,255)
+s7.FontSize = 2
+s7.Text = "Baby"
+s7.BackgroundTransparency = 1
+close2 = Instance.new("TextButton", fm2)
+close2.Size = UDim2.new(0,15,0,15)
+close2.Position = UDim2.new(0,285,0,0)
+close2.BackgroundTransparency = 1
+close2.TextColor3 = Color3.new(255,255,255)
+close2.Text = "X"
+close2.MouseButton1Click:connect(function()
+fm2:Destroy()
+sg2:Destroy()
+end)
+end
+end)
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "cmds" then
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = Admins.PlayerGui
+
+local scrollingFrame = Instance.new("ScrollingFrame")
+scrollingFrame.Parent = screenGui
+scrollingFrame.Position = UDim2.new(0.2, 0, 0.1, 0)
+scrollingFrame.Size = UDim2.new(0, 500, 0, 400)
+scrollingFrame.CanvasSize = UDim2.new(0, 500, 2, 0)
+scrollingFrame.BackgroundColor3 = Color3.new(0,0,0)
+scrollingFrame.BorderSizePixel = 2
+scrollingFrame.BorderColor3 = Color3.new(170,0,0)
+
+local closecmds = Instance.new("TextButton")
+closecmds.Parent = screenGui
+closecmds.Size = UDim2.new(0,50,0,50)
+closecmds.Position = UDim2.new(0.2, 0, 0.02, 0)
+closecmds.BackgroundColor3 = Color3.new(0,0,0)
+closecmds.Text = "X"
+closecmds.TextColor3 = Color3.new(170,0,0)
+closecmds.FontSize = 3
+closecmds.BorderSizePixel = 2
+closecmds.BorderColor3 = Color3.new(170,0,0)
+closecmds.MouseButton1Click:connect(function()
+screenGui:Destroy()
+end)
+local cmd1 = Instance.new("TextLabel")
+cmd1.Parent = scrollingFrame
+cmd1.Position = UDim2.new(0, 0, 0, 0)
+cmd1.Size = UDim2.new(0, 500, 0, 25)
+cmd1.BackgroundColor3= Color3.new(0,0,0)
+cmd1.TextColor3 = Color3.new(170,0,0)
+cmd1.FontSize = 5
+cmd1.Text = Prefix .. "kill <plr>"
+cmd1.ZIndex = 0
+
+local cmd2 = Instance.new("TextLabel")
+cmd2.Parent = scrollingFrame
+cmd2.Position = UDim2.new(0, 0, 0, 25)
+cmd2.Size = UDim2.new(0, 500, 0, 25)
+cmd2.BackgroundColor3= Color3.new(0,0,0)
+cmd2.TextColor3 = Color3.new(170,0,0)
+cmd2.FontSize = 5
+cmd2.Text = Prefix .. "kick <plr>"
+cmd2.ZIndex = 0
+
+local cmd3 = Instance.new("TextLabel")
+cmd3.Parent = scrollingFrame
+cmd3.Position = UDim2.new(0, 0, 0, 50)
+cmd3.Size = UDim2.new(0, 500, 0, 25)
+cmd3.BackgroundColor3= Color3.new(0,0,0)
+cmd3.TextColor3 = Color3.new(170,0,0)
+cmd3.FontSize = 5
+cmd3.Text = Prefix .. "ban <plr>"
+cmd3.ZIndex = 0
+
+local cmd4 = Instance.new("TextLabel")
+cmd4.Parent = scrollingFrame
+cmd4.Position = UDim2.new(0, 0, 0, 75)
+cmd4.Size = UDim2.new(0, 500, 0, 25)
+cmd4.BackgroundColor3= Color3.new(0,0,0)
+cmd4.TextColor3 = Color3.new(170,0,0)
+cmd4.FontSize = 5
+cmd4.Text = Prefix .. "explode <plr>"
+cmd4.ZIndex = 0
+
+local cmd5 = Instance.new("TextLabel")
+cmd5.Parent = scrollingFrame
+cmd5.Position = UDim2.new(0, 0, 0, 100)
+cmd5.Size = UDim2.new(0, 500, 0, 25)
+cmd5.BackgroundColor3= Color3.new(0,0,0)
+cmd5.TextColor3 = Color3.new(170,0,0)
+cmd5.FontSize = 5
+cmd5.Text = Prefix .. "exe <script>"
+cmd5.ZIndex = 0
+
+local cmd6 = Instance.new("TextLabel")
+cmd6.Parent = scrollingFrame
+cmd6.Position = UDim2.new(0, 0, 0, 100)
+cmd6.Size = UDim2.new(0, 500, 0, 25)
+cmd6.BackgroundColor3= Color3.new(0,0,0)
+cmd6.TextColor3 = Color3.new(170,0,0)
+cmd6.FontSize = 5
+cmd6.Text = Prefix .. "console show"
+cmd6.ZIndex = 0
+
+local cmd7 = Instance.new("TextLabel")
+cmd7.Parent = scrollingFrame
+cmd7.Position = UDim2.new(0, 0, 0, 100)
+cmd7.Size = UDim2.new(0, 500, 0, 25)
+cmd7.BackgroundColor3= Color3.new(0,0,0)
+cmd7.TextColor3 = Color3.new(170,0,0)
+cmd7.FontSize = 5
+cmd7.Text = Prefix .. "console hide"
+cmd7.ZIndex = 0
+
+local cmd8 = Instance.new("TextLabel")
+cmd8.Parent = scrollingFrame
+cmd8.Position = UDim2.new(0, 0, 0, 125)
+cmd8.Size = UDim2.new(0, 500, 0, 25)
+cmd8.BackgroundColor3= Color3.new(0,0,0)
+cmd8.TextColor3 = Color3.new(170,0,0)
+cmd8.FontSize = 5
+cmd8.Text = Prefix .. "ff <plr>"
+cmd8.ZIndex = 0
+
+local cmd9 = Instance.new("TextLabel")
+cmd9.Parent = scrollingFrame
+cmd9.Position = UDim2.new(0, 0, 0, 150)
+cmd9.Size = UDim2.new(0, 500, 0, 25)
+cmd9.BackgroundColor3= Color3.new(0,0,0)
+cmd9.TextColor3 = Color3.new(170,0,0)
+cmd9.FontSize = 5
+cmd9.Text = Prefix .. "unff <plr>"
+cmd9.ZIndex = 0
+
+local cmd10 = Instance.new("TextLabel")
+cmd10.Parent = scrollingFrame
+cmd10.Position = UDim2.new(0, 0, 0, 175)
+cmd10.Size = UDim2.new(0, 500, 0, 25)
+cmd10.BackgroundColor3= Color3.new(0,0,0)
+cmd10.TextColor3 = Color3.new(170,0,0)
+cmd10.FontSize = 5
+cmd10.Text = Prefix .. "respawn <plr>"
+cmd10.ZIndex = 0
+
+local cmd11 = Instance.new("TextLabel")
+cmd11.Parent = scrollingFrame
+cmd11.Position = UDim2.new(0, 0, 0, 200)
+cmd11.Size = UDim2.new(0, 500, 0, 25)
+cmd11.BackgroundColor3= Color3.new(0,0,0)
+cmd11.TextColor3 = Color3.new(170,0,0)
+cmd11.FontSize = 5
+cmd11.Text = Prefix .. "lag <plr>"
+cmd11.ZIndex = 0
+
+local cmd12 = Instance.new("TextLabel")
+cmd12.Parent = scrollingFrame
+cmd12.Position = UDim2.new(0, 0, 0, 225)
+cmd12.Size = UDim2.new(0, 500, 0, 25)
+cmd12.BackgroundColor3= Color3.new(0,0,0)
+cmd12.TextColor3 = Color3.new(170,0,0)
+cmd12.FontSize = 5
+cmd12.Text = Prefix .. "removetools <plr>"
+cmd12.ZIndex = 0
+
+local cmd13 = Instance.new("TextLabel")
+cmd13.Parent = scrollingFrame
+cmd13.Position = UDim2.new(0, 0, 0, 250)
+cmd13.Size = UDim2.new(0, 500, 0, 25)
+cmd13.BackgroundColor3= Color3.new(0,0,0)
+cmd13.TextColor3 = Color3.new(170,0,0)
+cmd13.FontSize = 5
+cmd13.Text = Prefix .. "god <plr>"
+cmd13.ZIndex = 0
+
+local cmd14 = Instance.new("TextLabel")
+cmd14.Parent = scrollingFrame
+cmd14.Position = UDim2.new(0, 0, 0, 275)
+cmd14.Size = UDim2.new(0, 500, 0, 25)
+cmd14.BackgroundColor3= Color3.new(0,0,0)
+cmd14.TextColor3 = Color3.new(170,0,0)
+cmd14.FontSize = 5
+cmd14.Text = Prefix .. "ungod <plr>"
+cmd14.ZIndex = 0
+
+local cmd15 = Instance.new("TextLabel")
+cmd15.Parent = scrollingFrame
+cmd15.Position = UDim2.new(0, 0, 0, 300)
+cmd15.Size = UDim2.new(0, 500, 0, 25)
+cmd15.BackgroundColor3= Color3.new(0,0,0)
+cmd15.TextColor3 = Color3.new(170,0,0)
+cmd15.FontSize = 5
+cmd15.Text = Prefix .. "muslist"
+cmd15.ZIndex = 0
+
+local cmd16 = Instance.new("TextLabel")
+cmd16.Parent = scrollingFrame
+cmd16.Position = UDim2.new(0, 0, 0, 325)
+cmd16.Size = UDim2.new(0, 500, 0, 25)
+cmd16.BackgroundColor3= Color3.new(0,0,0)
+cmd16.TextColor3 = Color3.new(170,0,0)
+cmd16.FontSize = 5
+cmd16.Text = Prefix .. "console show"
+cmd16.ZIndex = 0
+
+local cmd17 = Instance.new("TextLabel")
+cmd17.Parent = scrollingFrame
+cmd17.Position = UDim2.new(0, 0, 0, 350)
+cmd17.Size = UDim2.new(0, 500, 0, 25)
+cmd17.BackgroundColor3= Color3.new(0,0,0)
+cmd17.TextColor3 = Color3.new(170,0,0)
+cmd17.FontSize = 5
+cmd17.Text = Prefix .. "exe <command>"
+cmd17.ZIndex = 0
+
+local cmd18 = Instance.new("TextLabel")
+cmd18.Parent = scrollingFrame
+cmd18.Position = UDim2.new(0, 0, 0, 375)
+cmd18.Size = UDim2.new(0, 500, 0, 25)
+cmd18.BackgroundColor3= Color3.new(0,0,0)
+cmd18.TextColor3 = Color3.new(170,0,0)
+cmd18.FontSize = 5
+cmd18.Text = Prefix .. "music <id> or <song (from muslist)>"
+cmd18.ZIndex = 0
+
+local cmd19 = Instance.new("TextLabel")
+cmd19.Parent = scrollingFrame
+cmd19.Position = UDim2.new(0, 0, 0, 375)
+cmd19.Size = UDim2.new(0, 500, 0, 25)
+cmd19.BackgroundColor3= Color3.new(0,0,0)
+cmd19.TextColor3 = Color3.new(170,0,0)
+cmd19.FontSize = 5
+cmd19.Text = Prefix .. "pri"
+cmd19.ZIndex = 0
+
+local cmd20 = Instance.new("TextLabel")
+cmd20.Parent = scrollingFrame
+cmd20.Position = UDim2.new(0, 0, 0, 400)
+cmd20.Size = UDim2.new(0, 500, 0, 25)
+cmd20.BackgroundColor3= Color3.new(0,0,0)
+cmd20.TextColor3 = Color3.new(170,0,0)
+cmd20.FontSize = 5
+cmd20.Text = Prefix .. "cmds"
+cmd20.ZIndex = 0
+
+local cmd21 = Instance.new("TextLabel")
+cmd21.Parent = scrollingFrame
+cmd21.Position = UDim2.new(0, 0, 0, 425)
+cmd21.Size = UDim2.new(0, 500, 0, 25)
+cmd21.BackgroundColor3= Color3.new(0,0,0)
+cmd21.TextColor3 = Color3.new(170,0,0)
+cmd21.FontSize = 5
+cmd21.Text = Prefix .. "sit <plr>"
+cmd21.ZIndex = 0
+
+local cmd22 = Instance.new("TextLabel")
+cmd22.Parent = scrollingFrame
+cmd22.Position = UDim2.new(0, 0, 0, 450)
+cmd22.Size = UDim2.new(0, 500, 0, 25)
+cmd22.BackgroundColor3= Color3.new(0,0,0)
+cmd22.TextColor3 = Color3.new(170,0,0)
+cmd22.FontSize = 5
+cmd22.Text = Prefix .. "jump <plr>"
+cmd22.ZIndex = 0
+
+local cmd23 = Instance.new("TextLabel")
+cmd23.Parent = scrollingFrame
+cmd23.Position = UDim2.new(0, 0, 0, 475)
+cmd23.Size = UDim2.new(0, 500, 0, 25)
+cmd23.BackgroundColor3= Color3.new(0,0,0)
+cmd23.TextColor3 = Color3.new(170,0,0)
+cmd23.FontSize = 5
+cmd23.Text = Prefix .. "bruh <plr>"
+cmd23.ZIndex = 0
+
+local cmd24 = Instance.new("TextLabel")
+cmd24.Parent = scrollingFrame
+cmd24.Position = UDim2.new(0, 0, 0, 500)
+cmd24.Size = UDim2.new(0, 500, 0, 25)
+cmd24.BackgroundColor3= Color3.new(0,0,0)
+cmd24.TextColor3 = Color3.new(170,0,0)
+cmd24.FontSize = 5
+cmd24.Text = Prefix .. "ws <speed>"
+cmd24.ZIndex = 0
+
+local cmd25 = Instance.new("TextLabel")
+cmd25.Parent = scrollingFrame
+cmd25.Position = UDim2.new(0, 0, 0, 525)
+cmd25.Size = UDim2.new(0, 500, 0, 25)
+cmd25.BackgroundColor3= Color3.new(0,0,0)
+cmd25.TextColor3 = Color3.new(170,0,0)
+cmd25.FontSize = 5
+cmd25.Text = Prefix .. "gear <id>"
+cmd25.ZIndex = 0
+
+local cmd26 = Instance.new("TextLabel")
+cmd26.Parent = scrollingFrame
+cmd26.Position = UDim2.new(0, 0, 0, 550)
+cmd26.Size = UDim2.new(0, 500, 0, 25)
+cmd26.BackgroundColor3= Color3.new(0,0,0)
+cmd26.TextColor3 = Color3.new(170,0,0)
+cmd26.FontSize = 5
+cmd26.Text = Prefix .. "tp <plr>"
+cmd26.ZIndex = 0
+
+local cmd27 = Instance.new("TextLabel")
+cmd27.Parent = scrollingFrame
+cmd27.Position = UDim2.new(0, 0, 0, 575)
+cmd27.Size = UDim2.new(0, 500, 0, 25)
+cmd27.BackgroundColor3= Color3.new(0,0,0)
+cmd27.TextColor3 = Color3.new(170,0,0)
+cmd27.FontSize = 5
+cmd27.Text = Prefix .. "btools <plr>"
+cmd27.ZIndex = 0
+
+local cmd28 = Instance.new("TextLabel")
+cmd28.Parent = scrollingFrame
+cmd28.Position = UDim2.new(0, 0, 0, 600)
+cmd28.Size = UDim2.new(0, 500, 0, 25)
+cmd28.BackgroundColor3= Color3.new(0,0,0)
+cmd28.TextColor3 = Color3.new(170,0,0)
+cmd28.FontSize = 5
+cmd28.Text = Prefix .. "pitch <n>"
+cmd28.ZIndex = 0
+
+local cmd29 = Instance.new("TextLabel")
+cmd29.Parent = scrollingFrame
+cmd29.Position = UDim2.new(0, 0, 0, 625)
+cmd29.Size = UDim2.new(0, 500, 0, 25)
+cmd29.BackgroundColor3= Color3.new(0,0,0)
+cmd29.TextColor3 = Color3.new(170,0,0)
+cmd29.FontSize = 5
+cmd29.Text = Prefix .. "volume <n>"
+cmd29.ZIndex = 0
+end
+end)
+
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "console show" then
+sg = Instance.new('ScreenGui', Admins.PlayerGui)
+fm = Instance.new('Frame', sg)
+fm.Selectable = true
+fm.Size = UDim2.new(0,400,0,300)
+fm.BackgroundColor3 = Color3.new(0,0,0)
+fm.BorderSizePixel = 4
+fm.BorderColor3 = Color3.new(255,255,255)
+fm.Position = UDim2.new(0.395,0,0.3,0)
+txt = Instance.new('TextLabel', fm)
+txt.Size = UDim2.new(0,400,0,25)
+txt.Text = "~Game Console~"
+txt.FontSize = Enum.FontSize.Size18
+txt.TextColor3 = Color3.new(255,255,255)
+txt.BackgroundColor3 = Color3.new(0,0,0)
+txt.BorderSizePixel = 4
+txt.BorderColor3 = Color3.new(255,255,255)
+box = Instance.new('TextBox', fm)
+box.Position = UDim2.new(0,50,0,50)
+box.Size = UDim2.new(0,300,0,200)
+box.BackgroundColor3 = Color3.new(0,0,0)
+box.BorderSizePixel = 4
+box.BorderColor3 = Color3.new(255,255,255)
+box.TextColor3 = Color3.new(255,255,255)
+box.ClearTextOnFocus = false
+box.MultiLine = true
+box.TextXAlignment = 'Left'
+box.TextWrapped = true
+box.TextYAlignment = 'Top'
+box.Text = 'Click clear to clear the text or remove me by holding backspace!'
+load1 = Instance.new('TextButton', box)
+load1.Size = UDim2.new(0,200,0,25)
+load1.Position = UDim2.new(0,50,0,213)
+load1.BackgroundColor3 = Color3.new(0, 170, 0)
+load1.TextColor3 = Color3.new(0,0,0)
+load1.BorderSizePixel = 4
+load1.BorderColor3 = Color3.new(255,255,255)
+load1.Text = "Execute!"
+load1.MouseButton1Click:connect(function()
+loadstring(box.Text)()
+end)
+clr = Instance.new('TextButton', box)
+clr.Size = UDim2.new(0,50,0,25)
+clr.Position = UDim2.new(0,275,0,213)
+clr.BackgroundColor3 = Color3.new(170,0,0)
+clr.TextColor3 = Color3.new(0,0,0)
+clr.BorderSizePixel = 4
+clr.BorderColor3 = Color3.new(255,255,255)
+clr.Text = "Clear!"
+clr.MouseButton1Click:connect(function()
+box.Text = ''
+box:CaptureFocus()
+end)
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "console hide" then
+fm:Destroy()
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 5) == Prefix .. "kill" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(7))
+if player.Name:lower():sub(1, #msg:sub(7)) == msg:sub(7):lower() then
+pcall(function()
+player.Character.Humanoid.Health = 0
+end)
+end
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "kill me" then
+Admins.Character.Humanoid.Health = 0
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "kill all" then
+for i,v in pairs(game.Players:children()) do
+v.Character.Humanoid.Health = 0
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 5) == Prefix .. "kick" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(7))
+if player.Name:lower():sub(1, #msg:sub(7)) == msg:sub(7):lower() then
+pcall(function()
+local getrekt=Instance.new('RemoteEvent',workspace):FireClient(player,{string.rep("getkickedbro?",2e5+5)})
+end)
+end
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "kick me" then
+local getrekt=Instance.new('RemoteEvent',workspace):FireClient(Admins,{string.rep("getkickedbro?",2e5+5)})
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "kick all" then
+for i,v in pairs(game.Players:children()) do
+local getrekt=Instance.new('RemoteEvent',workspace):FireClient(v,{string.rep("getkickedbro?",2e5+5)})
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1,4) == Prefix .. "ban" then
+for index, player1 in pairs(Players:GetPlayers()) do
+player1.Name:lower():sub(1, #msg:sub(6))
+if player1.Name:lower():sub(1, #msg:sub(6)) == msg:sub(6):lower() then
+pcall(function()
+local getrekt=Instance.new('RemoteEvent',workspace):FireClient(player1,{string.rep("getkickedbro?",2e5+5)})
+if game.Players:FindFirstChild(player1.Name) then
+ban=Instance.new('StringValue',folder)
+ban.Name = player1.Name
+ban.Value = player1.Name
+end
+end)
+end
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "ban me" then
+local getrekt=Instance.new('RemoteEvent',workspace):FireClient(Admins,{string.rep("getkickedbro?",2e5+5)})
+if game.Players:FindFirstChild(Admins.Name) then
+ban=Instance.new('StringValue',folder)
+ban.Name = Admins.Name
+ban.Value = Admins.Name
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "ban all" then
+for i,v in pairs(game.Players:children()) do
+local getrekt=Instance.new('RemoteEvent',workspace):FireClient(v,{string.rep("getkickedbro?",2e5+5)})
+if game.Players:FindFirstChild(v.Name) then
+ban=Instance.new('StringValue',folder)
+ban.Name = v.Name
+ban.Value = v.Name
+end
+end
+end
+end)
+
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 8) == Prefix .. "explode" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(10))
+if player.Name:lower():sub(1, #msg:sub(10)) == msg:sub(10):lower() then
+pcall(function()
+ex = Instance.new("Explosion", game.Workspace)
+ex.Position = player.Character.Torso.Position
+end)
+end
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "explode me" then
+ex1 = Instance.new("Explosion", game.Workspace)
+ex1.Position = Admins.Character.Torso.Position
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "explode all" then
+for i,v in pairs(game.Players:children()) do
+ex1 = Instance.new("Explosion", game.Workspace)
+ex1.Position = v.Character.Torso.Position
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1,4) == Prefix .. "exe" then
+loadstring(msg:sub(5,#msg))()
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 3) == Prefix .. "ff" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(5))
+if player.Name:lower():sub(1, #msg:sub(5)) == msg:sub(5):lower() then
+pcall(function()
+Instance.new("ForceField", player.Character)
+end)
+else
+end
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 5) == Prefix .. "unff" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(7))
+if player.Name:lower():sub(1, #msg:sub(7)) == msg:sub(7):lower() then
+pcall(function()
+while true do
+player.Character.ForceField:Destroy()
+end
+end)
+end
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "ff me" then
+Instance.new("ForceField", Admins.Character)
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "unff me" then
+while true do
+Admins.Character.ForceField:Destroy()
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "ff all" then
+for i,v in pairs(game.Players:children()) do
+Instance.new("ForceField", v.Character)
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "unff all" then
+for i,v in pairs(game.Players:GetChildren()) do
+if v and v.Character then 
+for z, cl in pairs(v.Character:children()) do if cl:IsA("ForceField") then cl:Destroy() end end
+end
+end
+end
+end)
+
+
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 4) == Prefix .. "god" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(6))
+if player.Name:lower():sub(1, #msg:sub(6)) == msg:sub(6):lower() then
+pcall(function()
+player.Character.Humanoid.MaxHealth = math.huge
+end)
+else
+end
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 6) == Prefix .. "ungod" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(8))
+if player.Name:lower():sub(1, #msg:sub(8)) == msg:sub(8):lower() then
+pcall(function()
+player.Character.Humanoid.MaxHealth = 100
+end)
+end
+end
+end
+end)
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "god me" then
+Admins.Character.Humanoid.MaxHealth = math.huge
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "ungod me" then
+while true do
+Admins.Character.Humanoid.MaxHealth = 100
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "god all" then
+for i,v in pairs(game.Players:children()) do
+v.Character.Humanoid.MaxHealth = math.huge
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "ungod all" then
+for i,v in pairs(game.Players:GetChildren()) do
+v.Character.Humanoid.MaxHealth = 100
+end
+end
+end)
+
+
+
+
+Admins.Chatted:connect(function(msg)
+if msg:lower():sub(1, 8) == Prefix .. "respawn" then
+for index, player in pairs(Players:GetPlayers()) do
+player.Name:lower():sub(1, #msg:sub(10))
+if player.Name:lower():sub(1, #msg:sub(10)) == msg:sub(10):lower() then
+pcall(function()
+player:LoadCharacter()
+end)
+end
+end
+end
+end)
+
+Admins.Chatted:connect(function(msg)
+if msg:lower() == Prefix .. "respawn me" then
+Admins:LoadCharacter()
+end
+end)
+
+Admins.Chatted:connect(function(msg)
